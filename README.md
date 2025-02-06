@@ -23,6 +23,7 @@ If the output looks normal (starting with @HD, @SQ, etc.), the header is intact.
 
 
 BAMtobigWig Coversion
+
 **Step 1:**
 
 BigWig conversion requires BAM files to be sorted and indexed by coordinates.
