@@ -31,10 +31,13 @@ BigWig conversion requires BAM files to be sorted and indexed by coordinates.
 samtools sort -o sorted.bam input.bam
 samtools index sorted.bam
 ```
+If you have multiple bam file
+```
 for bam in *.bam; do
     samtools sort -o ${bam%.bam}.sorted.bam $bam
     samtools index ${bam%.bam}.sorted.bam
 done
+```
 
 If there are mutiple bam files merge them into one merged.bam
 samtools merge merged.bam *.sorted.bam
