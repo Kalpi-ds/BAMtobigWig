@@ -6,6 +6,7 @@ First validate BAM File Format with samtools
 `samtools quickcheck your_file.bam`
 
 If it returns no output, the file is likely fine. If there’s an issue, use samtools view to investigate:
+
 `samtools view your_file.bam | head`
 
 2. Check BAM Header
@@ -20,8 +21,9 @@ BAMtobigWig Coversion
 Step 1:
 
 BigWig conversion requires BAM files to be sorted and indexed by coordinates.
-`samtools sort -o sorted.bam input.bam`
-`samtools index sorted.bam`
+
+```samtools sort -o sorted.bam input.bam
+samtools index sorted.bam```
 
 for bam in *.bam; do
     samtools sort -o ${bam%.bam}.sorted.bam $bam
