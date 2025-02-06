@@ -3,11 +3,11 @@
 First validate BAM File Format with samtools
 1. Run a quick check using samtools quickcheck:
 
-`samtools quickcheck your_file.bam`
+```samtools quickcheck your_file.bam`
 
 If it returns no output, the file is likely fine. If there’s an issue, use samtools view to investigate:
 
-`samtools view your_file.bam | head`
+```samtools view your_file.bam | head`
 
 2. Check BAM Header
 Ensure the BAM file structure is intact:
