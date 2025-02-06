@@ -23,7 +23,7 @@ If the output looks normal (starting with @HD, @SQ, etc.), the header is intact.
 
 
 BAMtobigWig Coversion
-Step 1:
+**Step 1:**
 
 BigWig conversion requires BAM files to be sorted and indexed by coordinates.
 
@@ -45,7 +45,7 @@ samtools merge merged.bam *.sorted.bam
 samtools index merged.bam
 ```
 
-Step 2
+**Step 2:**
 Generate bigWig using bamCoverage or bedtools genomecov
 ```
 bamCoverage -b merged.bam -o merged.bw --binSize 10 --normalizeUsing RPKM
@@ -67,7 +67,7 @@ fetchChromSizes hg38 > genome.chrom.sizes  # Replace hg38 with your genome
 bedGraphToBigWig merged.bedgraph genome.chrom.sizes merged.bw
 ```
 
-Step 3: 
+**Step 3:** 
 Verify the bigWig File
 Check if the bigWig was successfully created:
 
