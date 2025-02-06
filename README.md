@@ -15,7 +15,9 @@ samtools view your_file.bam | head
 2. Check BAM Header
 Ensure the BAM file structure is intact:
 
-`samtools view -H your_file.bam`
+```
+samtools view -H your_file.bam
+```
 
 If the output looks normal (starting with @HD, @SQ, etc.), the header is intact.
 
@@ -25,9 +27,10 @@ Step 1:
 
 BigWig conversion requires BAM files to be sorted and indexed by coordinates.
 
-```samtools sort -o sorted.bam input.bam
+```
+samtools sort -o sorted.bam input.bam
 samtools index sorted.bam
-
+```
 for bam in *.bam; do
     samtools sort -o ${bam%.bam}.sorted.bam $bam
     samtools index ${bam%.bam}.sorted.bam
