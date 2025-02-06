@@ -1,5 +1,6 @@
 # BAMtobigWig
-#Step 1
+Step 1:
+
 BigWig conversion requires BAM files to be sorted and indexed by coordinates.
 samtools sort -o sorted.bam input.bam
 samtools index sorted.bam
