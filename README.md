@@ -22,7 +22,7 @@ samtools view -H your_file.bam
 If the output looks normal (starting with @HD, @SQ, etc.), the header is intact.
 
 
-BAMtobigWig Coversion
+**BAMtobigWig Coversion**
 
 **Step 1:**
 
