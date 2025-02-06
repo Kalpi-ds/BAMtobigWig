@@ -47,6 +47,7 @@ samtools index merged.bam
 ```
 
 **Step 2:**
+
 Generate bigWig using bamCoverage or bedtools genomecov
 ```
 bamCoverage -b merged.bam -o merged.bw --binSize 10 --normalizeUsing RPKM
@@ -69,6 +70,7 @@ bedGraphToBigWig merged.bedgraph genome.chrom.sizes merged.bw
 ```
 
 **Step 3:** 
+
 Verify the bigWig File
 Check if the bigWig was successfully created:
 
