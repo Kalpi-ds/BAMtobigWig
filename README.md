@@ -1,22 +1,18 @@
 # BAMtobigWig
 
 First validate BAM File Format with samtools
-Run a quick check using samtools quickcheck:
+1. Run a quick check using samtools quickcheck:
 
 `samtools quickcheck your_file.bam`
-If it returns no output, the file is likely fine. If there’s an issue, use samtools view to investigate:
 
-bash
-Copy
-Edit
-samtools view your_file.bam | head
-3. Check BAM Header
+If it returns no output, the file is likely fine. If there’s an issue, use samtools view to investigate:
+`samtools view your_file.bam | head`
+
+2. Check BAM Header
 Ensure the BAM file structure is intact:
 
-bash
-Copy
-Edit
-samtools view -H your_file.bam
+`samtools view -H your_file.bam`
+
 If the output looks normal (starting with @HD, @SQ, etc.), the header is intact.
 
 
