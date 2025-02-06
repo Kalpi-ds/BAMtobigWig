@@ -16,12 +16,12 @@ Ensure the BAM file structure is intact:
 If the output looks normal (starting with @HD, @SQ, etc.), the header is intact.
 
 
-
+BAMtobigWig Coversion
 Step 1:
 
 BigWig conversion requires BAM files to be sorted and indexed by coordinates.
-samtools sort -o sorted.bam input.bam
-samtools index sorted.bam
+`samtools sort -o sorted.bam input.bam`
+`samtools index sorted.bam`
 
 for bam in *.bam; do
     samtools sort -o ${bam%.bam}.sorted.bam $bam
