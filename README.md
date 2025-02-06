@@ -5,7 +5,7 @@ First validate BAM File Format with samtools
 
 ```
 samtools quickcheck your_file.bam
-
+```
 If it returns no output, the file is likely fine. If there’s an issue, use samtools view to investigate:
 
 ```samtools view your_file.bam | head`
