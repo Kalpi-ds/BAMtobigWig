@@ -33,4 +33,3 @@ for bam in *.sorted.bam; do
 done
 
 echo "Processing complete!"
-/bio/data/Genomes/Hs/hg38.p12/hg38.p12.chrom.sizes
